@@ -34,7 +34,7 @@ def update_book(request, book_id):
     book = Book.objects.get(id=book_id)
     serializer = BookSerializer(instance=book, data=request.data)
     if serializer.is_valid():
-        serializer.save()
+         serializer.save()
     return Response(serializer.data)
 @login_required
 @api_view(["DELETE"])
