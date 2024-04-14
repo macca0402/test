@@ -47,6 +47,6 @@ def user_logout(request):
     if request.user.is_authenticated:
         # Xóa token xác thực của người dùng hiện tại
         request.auth.delete()
-        return Response({"detail": "Logged out successfully."}, status=status.HTTP_204_NO_CONTENT)
+        return Response({"detail": "Logged out successfully..."}, status=status.HTTP_204_NO_CONTENT)
     else:
         return Response({"detail": "User is not authenticated."}, status=status.HTTP_401_UNAUTHORIZED)
